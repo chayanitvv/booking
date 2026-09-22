@@ -1,4 +1,4 @@
-const API_BASE_URL = localStorage.getItem('apiBaseUrl') || 'http://localhost:5000/api';
+const API_BASE_URL = localStorage.getItem('apiBaseUrl') || '/api';
 const tokenKey = 'booking_auth_token';
 const authView = document.querySelector('#auth-view');
 const profileView = document.querySelector('#profile-view');

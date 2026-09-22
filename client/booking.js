@@ -1,4 +1,4 @@
-const API_BASE_URL = localStorage.getItem('apiBaseUrl') || 'http://localhost:5000/api';
+const API_BASE_URL = localStorage.getItem('apiBaseUrl') || '/api';
 const token = localStorage.getItem('booking_auth_token');
 let selectedFlight;
 let currentUser;

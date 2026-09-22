@@ -1,4 +1,4 @@
-const API_BASE_URL = localStorage.getItem('apiBaseUrl') || 'http://localhost:5000/api';
+const API_BASE_URL = localStorage.getItem('apiBaseUrl') || '/api';
 let bookings = [];
 const currency = (value) => new Intl.NumberFormat('th-TH', { style: 'currency', currency: 'THB', maximumFractionDigits: 0 }).format(value);
 const dateTime = (value) => new Intl.DateTimeFormat('th-TH', { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(value));
