@@ -7,6 +7,7 @@ const bookingRoutes = require("./routes/booking.routes");
 const serviceBookingRoutes = require("./routes/service-booking.routes");
 const uploadRoutes = require("./routes/upload.routes");
 const { notFound, errorHandler } = require("./middlewares/error.middleware");
+const connectDB = require("./config/db");
 
 const app = express();
 
@@ -15,6 +16,17 @@ app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 
 app.get("/api/health", (req, res) => res.json({ status: "ok" }));
+
+// Ensure MongoDB is connected before any route that touches the database.
+app.use("/api", async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (error) {
+    next(error);
+  }
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/tracks", trackRoutes);
 app.use("/api/flights", flightRoutes);

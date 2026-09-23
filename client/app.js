@@ -14,7 +14,7 @@ async function request(path, options = {}) {
     ...options,
     headers: { 'Content-Type': 'application/json', ...options.headers },
   });
-  const data = await response.json();
+  const data = await response.json().catch(() => ({}));
   if (!response.ok) throw new Error(data.message || 'เกิดข้อผิดพลาด กรุณาลองใหม่');
   return data;
 }
