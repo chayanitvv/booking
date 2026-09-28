@@ -40,4 +40,4 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(PORT, () => console.log(`Client running at http://localhost:${PORT}`));
+server.listen(PORT, () => console.log(`Client running at https://booking-server-omega.vercel.app/://:${PORT}`));
