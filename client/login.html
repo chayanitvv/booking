@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunset Journey | เข้าสู่ระบบ</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="auth-layout">
+      <section class="intro">
+        <div class="sunset-glow glow-one"></div><div class="sunset-glow glow-two"></div>
+        <p class="eyebrow">✦ SUNSET JOURNEY</p>
+        <h1>ทุกการเดินทาง<br />เริ่มต้นได้ที่นี่</h1>
+        <p>เข้าสู่ระบบเพื่อวางแผน ดู และจัดการการจองครั้งต่อไปของคุณ</p>
+        <div class="travel-stamps"><span>✈️ เที่ยวบิน</span><span>⌂ ที่พัก</span><span>☀️ การผจญภัย</span></div>
+      </section>
+      <section class="card" aria-live="polite">
+        <div id="auth-view">
+          <a class="back-home" href="index.html">← กลับสู่หน้าแรก</a>
+          <div class="tabs" role="tablist">
+            <button class="tab active" data-form="login" type="button">เข้าสู่ระบบ</button>
+            <button class="tab" data-form="register" type="button">สมัครสมาชิก</button>
+          </div>
+          <form id="login-form" class="form">
+            <label>อีเมล<input type="email" name="email" autocomplete="email" required /></label>
+            <label>รหัสผ่าน<input type="password" name="password" autocomplete="current-password" minlength="6" required /></label>
+            <button class="primary" type="submit">เข้าสู่ระบบ</button>
+          </form>
+          <form id="register-form" class="form hidden">
+            <div class="name-row"><label>ชื่อ<input name="firstName" autocomplete="given-name" required /></label><label>นามสกุล<input name="lastName" autocomplete="family-name" required /></label></div>
+            <label>อีเมล<input type="email" name="email" autocomplete="email" required /></label>
+            <label>เบอร์โทรศัพท์<input type="tel" name="phone" autocomplete="tel" required /></label>
+            <label>เลขพาสปอร์ต <span>(ไม่บังคับ)</span><input name="passportNo" /></label>
+            <label>รหัสผ่าน<input type="password" name="password" autocomplete="new-password" minlength="6" required /></label>
+            <button class="primary" type="submit">สร้างบัญชี</button>
+          </form>
+          <p id="message" class="message" role="alert"></p>
+        </div>
+        <div id="profile-view" class="profile hidden"><p class="eyebrow">SIGNED IN</p><h2 id="welcome"></h2><p id="email"></p><button id="logout" class="secondary" type="button">ออกจากระบบ</button></div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

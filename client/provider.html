@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="th">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Sunset Journey | Provider Desk</title><link rel="stylesheet" href="styles.css" /></head>
+  <body class="provider-page">
+    <header class="site-header provider-header"><a class="brand" href="provider.html"><span>✦</span> sunset journey <small>provider desk</small></a><span class="provider-status"><i></i> ระบบรับจองออนไลน์</span></header>
+    <main class="provider-main">
+      <section class="provider-intro"><p class="eyebrow">PARTNER OPERATIONS</p><h1>รายการจอง<br /><em>ของผู้ให้บริการ</em></h1><p>ตรวจสอบข้อมูลผู้จอง บริการ และสถานะการชำระเงินจากรายการล่าสุด</p></section>
+      <section class="provider-toolbar"><label>ค้นหาการจอง<input id="booking-search" type="search" placeholder="เลขที่จอง หรือชื่อผู้จอง" /></label><label>ประเภทบริการ<select id="service-filter"><option value="">ทั้งหมด</option><option value="flight">เที่ยวบิน</option><option value="stay">ที่พัก</option><option value="car">รถเช่า</option></select></label><button id="refresh-bookings" class="primary" type="button">รีเฟรชข้อมูล <span>↻</span></button></section>
+      <p id="provider-message" class="message" role="alert"></p><section id="booking-list" class="provider-list"></section>
+    </main>
+    <script src="provider.js"></script>
+  </body>
+</html>
